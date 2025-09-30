@@ -1,36 +1,141 @@
-# React + TypeScript + Vite + Tailwind
+# Meshy 3D Studio
 
-This template provides a minimal setup to get React working in Vite, TypeScript, and Tailwind.
+A beautiful and comprehensive web application for the Meshy API that allows you to create 3D models from text descriptions and images, with support for remeshing, rigging, and model management.
 
-## Getting Started 🚀
+## Features
 
-1. Clone the repo.
-2. Install dependencies: `pnpm install`
-3. Start the dev server: `pnpm dev`
+### 🎨 Text to 3D
+- Generate 3D models from text descriptions
+- Multiple art styles: Realistic, Cartoon, Low Poly, Sculpture, PBR
+- Preview and refine modes
+- Negative prompts support
+- Automatic remeshing option
 
-### Or
+### 🖼️ Image to 3D
+- Convert single images to 3D models
+- File upload and URL support
+- PBR material generation
+- Texture application
+- Multiple format exports
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmoinulmoin%2Fvite-react-tailwind-starter)
+### 🖼️ Multi-Image to 3D
+- Create detailed 3D models from multiple images
+- Drag & drop interface
+- URL and file upload support
+- Enhanced accuracy with multiple viewpoints
 
-## Expanding the ESLint configuration
+### 🔧 Remesh
+- Optimize existing 3D models
+- Multiple output formats (GLB, FBX, OBJ, USD, PLY)
+- Topology control (Quad/Triangle)
+- Polycount optimization
+- Model scaling and positioning
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### 🤖 Rigging
+- Add skeletal animation to 3D models
+- Character height configuration
+- Quick presets for different character types
+- Animation-ready output
 
-- Configure the top-level `parserOptions` property like this:
+### 📊 Task Management
+- Real-time progress tracking
+- Task history and management
+- Download management
+- Error handling and retry
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+### 🌙 Dark/Light Mode
+- Automatic theme detection
+- Manual theme toggle
+- Persistent theme preferences
+- Beautiful UI in both modes
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Setup
 
-## License 📄
+1. **Install Dependencies**
+   ```bash
+   npm install
+   ```
 
-[MIT License](https://github.com/moinulmoin/vite-react-tailwind-starter/blob/master/LICENSE)
+2. **Configure Environment**
+   - The `.env` file is already set up with your API key
+   - Your API key: `msy_lp9EWRp4THm4w3FTPp6dD8sccxmGWJMEqC4q`
+
+3. **Start Development Server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for Production**
+   ```bash
+   npm run build
+   ```
+
+## Usage Guide
+
+### Getting Started
+1. Launch the application
+2. Use the sidebar navigation to select the desired feature
+3. Follow the intuitive forms for each feature
+4. Monitor progress in real-time
+5. Download your generated 3D models
+
+### Text to 3D
+1. Navigate to "Text to 3D"
+2. Enter a descriptive prompt (e.g., "a medieval castle")
+3. Choose art style and mode
+4. Optionally add negative prompts
+5. Click "Generate 3D Model"
+6. Wait for processing and download results
+
+### Image to 3D
+1. Navigate to "Image to 3D"
+2. Upload an image or provide a URL
+3. Configure PBR, texturing, and remeshing options
+4. Start generation and monitor progress
+5. Download the resulting 3D model
+
+### Multi-Image to 3D
+1. Navigate to "Multi-Image to 3D"
+2. Upload multiple images (minimum 2)
+3. Configure generation options
+4. Start processing
+5. Download high-quality 3D model
+
+### Remesh
+1. Navigate to "Remesh"
+2. Enter the task ID of a previously generated model
+3. Select output formats and quality settings
+4. Configure topology and polycount
+5. Start remeshing process
+
+### Rigging
+1. Navigate to "Rigging"
+2. Upload a 3D model or provide URL
+3. Set character height
+4. Use quick presets or manual configuration
+5. Generate rigged model for animation
+
+## API Features Implemented
+
+- ✅ Text to 3D (v2 API)
+- ✅ Image to 3D (v1 API)
+- ✅ Multi-Image to 3D (v1 API)
+- ✅ Remesh (v1 API)
+- ✅ Rigging (v1 API)
+- ✅ Task Status Polling
+- ✅ Task History
+- ✅ File Upload & Base64 Support
+- ✅ Multiple Format Downloads
+
+## Technical Stack
+
+- **Frontend**: React 18 + TypeScript
+- **Styling**: Tailwind CSS + Shadcn/ui
+- **HTTP Client**: Axios
+- **Icons**: Lucide React
+- **Build Tool**: Vite
+- **API**: Meshy AI v1/v2
+
+---
+
+**Enjoy creating amazing 3D models with Meshy 3D Studio!** 🎨✨
