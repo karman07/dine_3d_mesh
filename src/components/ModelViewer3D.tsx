@@ -36,8 +36,6 @@ const ModelViewer3D: React.FC<ModelViewerProps> = ({
   console.log('🔍 ModelViewer3D - GLB URL:', glbUrl);
   const isGlbFile = glbUrl?.toLowerCase().includes('.glb') || glbUrl?.toLowerCase().includes('model.glb');
   
-  // Add CORS proxy for problematic URLs
-  
   // Don't render 3D viewer if no GLB file is available
   if (!isGlbFile || !glbUrl) {
     return (
